@@ -9,6 +9,8 @@
   - Search for relevant shows on all pages
   - The data is in local data.js file
 
+@searchForm @reactRouter6
+
 <p align-items: center>
     <img src='./readme-images/Screenshot-gallery-site-1.png' width='250'>
 </p>
@@ -25,3 +27,8 @@
 #### Comments about the code
 
 #### Helpers
+
+- for react-router-dom@6
+  - npm install react-router-dom@6
+  - [tutorial](https://www.udemy.com/course/react-tutorial-and-projects-course/learn/lecture/31400928#content)
+  - [repo](https://github.com/john-smilga/react-router-6-tutorial)
