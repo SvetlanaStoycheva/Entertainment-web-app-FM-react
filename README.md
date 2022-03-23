@@ -9,7 +9,7 @@
   - Search for relevant shows on all pages
   - The data is in local data.js file
 
-@searchForm @reactRouter6
+@searchForm @reactRouter6 @importData @activeButtons
 
 <p align-items: center>
     <img src='./readme-images/Screenshot-gallery-site-1.png' width='250'>
