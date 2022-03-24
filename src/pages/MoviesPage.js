@@ -1,11 +1,15 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import SearchForm from '../components/SearchForm';
 
 const MoviesPage = () => {
   return (
-    <section className='movie-page-container'>
+    <section className='home-page-container'>
       <Navbar />
-      <div className='movie-page-inner-container'></div>
+      <div className='home-page-inner-container'>
+        <SearchForm />
+        <div className='home-page-content-container'></div>
+      </div>
     </section>
   );
 };

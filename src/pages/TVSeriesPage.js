@@ -4,11 +4,11 @@ import SearchForm from '../components/SearchForm';
 
 const TVSeriesPage = () => {
   return (
-    <section className='series-page-container'>
+    <section className='home-page-container'>
       <Navbar />
-      <div className='series-page-inner-container'>
+      <div className='home-page-inner-container'>
         <SearchForm />
-        <div className='series-page-content-container'></div>
+        <div className='home-page-content-container'></div>
       </div>
     </section>
   );

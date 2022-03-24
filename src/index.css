@@ -205,6 +205,50 @@ Navbar
 
 /*
 =============== 
+SearchForm
+===============
+*/
+.form-container {
+  width: 100vw;
+  background: var(--clr-primary-very-dark-blue);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.search-icon {
+  color: var(--clr-primary-white);
+  background: var(--clr-primary-very-dark-blue);
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+.search-input {
+  width: 80vw;
+  height: 2rem;
+  color: var(--clr-primary-white);
+  font-size: 1rem;
+  letter-spacing: var(--spacing);
+  background: var(--clr-primary-very-dark-blue);
+  border: transparent;
+  caret-color: var(--clr-primary-soft-red);
+  padding: 1.2rem;
+}
+.search-input::placeholder {
+  font-size: 1rem;
+  letter-spacing: var(--spacing);
+  padding: 1rem;
+  margin-left: 2rem;
+}
+@media screen and (min-width: 980px) {
+  .search-input {
+    width: 70vw;
+    border-bottom: 2px solid var(--clr-primary-grayish-blue);
+  }
+  .form-container {
+    margin-top: 1rem;
+  }
+}
+/*
+=============== 
 Home Page
 ===============
 */
@@ -218,6 +262,8 @@ Home Page
 }
 @media screen and (min-width: 980px) {
   .home-page-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
     padding: 2rem;
   }
 }
