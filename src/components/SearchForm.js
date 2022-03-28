@@ -22,6 +22,7 @@ const SearchForm = () => {
   } else if (currentPath === '/movies') {
     return (
       <form className='form-container' onSubmit={(e) => e.preventDefault()}>
+        <FaSearch className='search-icon' />
         <input
           type='text'
           className='search-input'
@@ -34,6 +35,7 @@ const SearchForm = () => {
   } else if (currentPath === '/tvseries') {
     return (
       <form className='form-container' onSubmit={(e) => e.preventDefault()}>
+        <FaSearch className='search-icon' />
         <input
           type='text'
           className='search-input'
@@ -46,6 +48,7 @@ const SearchForm = () => {
   } else if (currentPath === '/bookmarked') {
     return (
       <form className='form-container' onSubmit={(e) => e.preventDefault()}>
+        <FaSearch className='search-icon' />
         <input
           type='text'
           className='search-input'
