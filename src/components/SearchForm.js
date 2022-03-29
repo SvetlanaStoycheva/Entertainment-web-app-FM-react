@@ -3,7 +3,6 @@ import { FaSearch } from 'react-icons/fa';
 
 const SearchForm = () => {
   const currentPath = window.location.pathname;
-  console.log(currentPath);
 
   //
   if (currentPath === '/') {

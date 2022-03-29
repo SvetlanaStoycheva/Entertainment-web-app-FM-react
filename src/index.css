@@ -254,7 +254,7 @@ Home Page
 */
 .home-page-container {
   width: 100vw;
-  height: 100vh;
+  max-width: var(--max-width);
   background: var(--clr-primary-very-dark-blue);
 }
 .home-page-inner-container {
@@ -273,9 +273,8 @@ Home Page
 /* Trending slider */
 .trending-slider {
   width: auto;
-  height: 23rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .slider-inner-container {
   display: grid;
@@ -306,15 +305,21 @@ Home Page
   display: flex;
   width: 10rem;
   justify-content: space-evenly;
+  align-items: center;
   color: RGBA(236, 236, 236, 0.7);
 }
 .dots {
-  /* margin-bottom: 0.5rem; */
+  padding-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+.slider-movie-icon {
+  margin-top: 0.5rem;
 }
 .sider-movie-title {
   font-weight: 300;
   font-size: 1rem;
   margin-left: 0.4rem;
+  margin-top: -0.5rem;
 }
 .trending-bookmark-icon {
   position: absolute;
@@ -333,4 +338,74 @@ Home Page
 .trending-bookmark-icon:hover {
   color: RGBA(108, 122, 137, 0.7);
   background-color: RGBA(238, 238, 238, 0.7);
+}
+@media screen and (min-width: 780px) {
+  .slider-img {
+    width: 22rem;
+  }
+}
+
+/* Recommended Container */
+.recommended-container {
+  background-color: var(--clr-primary-very-dark-blue);
+  width: 100vw;
+}
+.recommended-inner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+.recommended-img {
+  width: 45vw;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.single-recommended-slide {
+  width: 45vw;
+}
+.recommended-info-header {
+  display: flex;
+  color: RGBA(236, 236, 236, 0.7);
+  justify-content: space-evenly;
+  align-items: center;
+  width: 10rem;
+  margin: 0;
+}
+
+.recommended-bookmark-icon {
+  right: 5%;
+  top: 5%;
+}
+.recommended-info-container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 1rem;
+  margin-top: -0.5rem;
+}
+@media screen and (min-width: 780px) {
+  .recommended-inner-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .recommended-img {
+    width: 30vw;
+    height: 10rem;
+  }
+  .single-recommended-slide {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 980px) {
+  .recommended-inner-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 88vw;
+  }
+  .recommended-img {
+    width: 20vw;
+    height: 10rem;
+  }
+  .single-recommended-slide {
+    width: 20vw;
+  }
 }

@@ -4,33 +4,36 @@ import { BiBookmark } from 'react-icons/bi';
 import { MdLocalMovies } from 'react-icons/md';
 import { FaBookmark } from 'react-icons/fa';
 
-const Trending = () => {
-  const trendingItems = data.filter((i) => i.isTrending);
+const Recommended = () => {
+  const recommendedItems = data.filter((i) => !i.isTrending);
 
   return (
-    <section className='trending-slider'>
-      <h4 className='slider-title'>Trending</h4>
-      <div className='slider-inner-container'>
-        {trendingItems.map((i, index) => {
+    <section className='recommended-container'>
+      <h4 className='slider-title'>Recommended for you</h4>
+      <div className='recommended-inner-container'>
+        {recommendedItems.map((i, index) => {
           const {
             category,
             rating,
             thumbnail: {
-              trending: { large: sliderImg },
+              regular: { large: sliderImg },
             },
             title,
             year,
             isBookmarked,
           } = i;
           return (
-            <div className='single-trending-slide' key={index}>
-              <img src={sliderImg} alt={title} className='slider-img' />
-              <span className='trending-bookmark-icon'>
+            <div
+              className='single-trending-slide single-recommended-slide'
+              key={index}
+            >
+              <img src={sliderImg} alt={title} className='recommended-img' />
+              <span className='trending-bookmark-icon recommended-bookmark-icon'>
                 {isBookmarked ? <FaBookmark /> : <BiBookmark />}
               </span>
 
-              <div className='trending-info-container'>
-                <div className='trending-info-header'>
+              <div className='trending-info-container recommended-info-container'>
+                <div className=' recommended-info-header'>
                   <p>{year}</p>
                   <span className='dots'>.</span>
                   <p>
@@ -52,4 +55,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Recommended;

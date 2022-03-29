@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import SearchForm from '../components/SearchForm';
 import Trending from '../components/Trending';
+import Recommended from '../components/Recommended';
 
 const HomePage = () => {
   return (
@@ -10,7 +11,7 @@ const HomePage = () => {
       <div className='home-page-inner-container'>
         <SearchForm />
         <Trending />
-        <div className='home-page-content-container'></div>
+        <Recommended />
       </div>
     </section>
   );

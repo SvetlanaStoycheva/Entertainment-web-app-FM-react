@@ -108,7 +108,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/the-great-lands/regular/small.jpg',
         medium: './assets/thumbnails/the-great-lands/regular/medium.jpg',
-        large: './assets/thumbnails/the-great-lands/regular/large.jpg',
+        large: require('./assets/thumbnails/the-great-lands/regular/large.jpg')
+          .default,
       },
     },
     year: 2019,
@@ -123,7 +124,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/the-diary/regular/small.jpg',
         medium: './assets/thumbnails/the-diary/regular/medium.jpg',
-        large: './assets/thumbnails/the-diary/regular/large.jpg',
+        large: require('./assets/thumbnails/the-diary/regular/large.jpg')
+          .default,
       },
     },
     year: 2019,
@@ -138,7 +140,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/earths-untouched/regular/small.jpg',
         medium: './assets/thumbnails/earths-untouched/regular/medium.jpg',
-        large: './assets/thumbnails/earths-untouched/regular/large.jpg',
+        large: require('./assets/thumbnails/earths-untouched/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
@@ -153,7 +156,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/no-land-beyond/regular/small.jpg',
         medium: './assets/thumbnails/no-land-beyond/regular/medium.jpg',
-        large: './assets/thumbnails/no-land-beyond/regular/large.jpg',
+        large: require('./assets/thumbnails/no-land-beyond/regular/large.jpg')
+          .default,
       },
     },
     year: 2019,
@@ -168,7 +172,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/during-the-hunt/regular/small.jpg',
         medium: './assets/thumbnails/during-the-hunt/regular/medium.jpg',
-        large: './assets/thumbnails/during-the-hunt/regular/large.jpg',
+        large: require('./assets/thumbnails/during-the-hunt/regular/large.jpg')
+          .default,
       },
     },
     year: 2016,
@@ -183,7 +188,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/autosport-the-series/regular/small.jpg',
         medium: './assets/thumbnails/autosport-the-series/regular/medium.jpg',
-        large: './assets/thumbnails/autosport-the-series/regular/large.jpg',
+        large: require('./assets/thumbnails/autosport-the-series/regular/large.jpg')
+          .default,
       },
     },
     year: 2016,
@@ -198,7 +204,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/same-answer-2/regular/small.jpg',
         medium: './assets/thumbnails/same-answer-2/regular/medium.jpg',
-        large: './assets/thumbnails/same-answer-2/regular/large.jpg',
+        large: require('./assets/thumbnails/same-answer-2/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
@@ -213,7 +220,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/below-echo/regular/small.jpg',
         medium: './assets/thumbnails/below-echo/regular/medium.jpg',
-        large: './assets/thumbnails/below-echo/regular/large.jpg',
+        large: require('./assets/thumbnails/below-echo/regular/large.jpg')
+          .default,
       },
     },
     year: 2016,
@@ -228,7 +236,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/the-rockies/regular/small.jpg',
         medium: './assets/thumbnails/the-rockies/regular/medium.jpg',
-        large: './assets/thumbnails/the-rockies/regular/large.jpg',
+        large: require('./assets/thumbnails/the-rockies/regular/large.jpg')
+          .default,
       },
     },
     year: 2015,
@@ -243,7 +252,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/relentless/regular/small.jpg',
         medium: './assets/thumbnails/relentless/regular/medium.jpg',
-        large: './assets/thumbnails/relentless/regular/large.jpg',
+        large: require('./assets/thumbnails/relentless/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
@@ -258,7 +268,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/community-of-ours/regular/small.jpg',
         medium: './assets/thumbnails/community-of-ours/regular/medium.jpg',
-        large: './assets/thumbnails/community-of-ours/regular/large.jpg',
+        large: require('./assets/thumbnails/community-of-ours/regular/large.jpg')
+          .default,
       },
     },
     year: 2018,
@@ -273,7 +284,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/van-life/regular/small.jpg',
         medium: './assets/thumbnails/van-life/regular/medium.jpg',
-        large: './assets/thumbnails/van-life/regular/large.jpg',
+        large: require('./assets/thumbnails/van-life/regular/large.jpg')
+          .default,
       },
     },
     year: 2015,
@@ -288,7 +300,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/the-heiress/regular/small.jpg',
         medium: './assets/thumbnails/the-heiress/regular/medium.jpg',
-        large: './assets/thumbnails/the-heiress/regular/large.jpg',
+        large: require('./assets/thumbnails/the-heiress/regular/large.jpg')
+          .default,
       },
     },
     year: 2021,
@@ -303,7 +316,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/off-the-track/regular/small.jpg',
         medium: './assets/thumbnails/off-the-track/regular/medium.jpg',
-        large: './assets/thumbnails/off-the-track/regular/large.jpg',
+        large: require('./assets/thumbnails/off-the-track/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
@@ -318,7 +332,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/whispering-hill/regular/small.jpg',
         medium: './assets/thumbnails/whispering-hill/regular/medium.jpg',
-        large: './assets/thumbnails/whispering-hill/regular/large.jpg',
+        large: require('./assets/thumbnails/whispering-hill/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
@@ -333,7 +348,7 @@ const data = [
       regular: {
         small: './assets/thumbnails/112/regular/small.jpg',
         medium: './assets/thumbnails/112/regular/medium.jpg',
-        large: './assets/thumbnails/112/regular/large.jpg',
+        large: require('./assets/thumbnails/112/regular/large.jpg').default,
       },
     },
     year: 2013,
@@ -348,7 +363,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/lone-heart/regular/small.jpg',
         medium: './assets/thumbnails/lone-heart/regular/medium.jpg',
-        large: './assets/thumbnails/lone-heart/regular/large.jpg',
+        large: require('./assets/thumbnails/lone-heart/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
@@ -363,7 +379,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/production-line/regular/small.jpg',
         medium: './assets/thumbnails/production-line/regular/medium.jpg',
-        large: './assets/thumbnails/production-line/regular/large.jpg',
+        large: require('./assets/thumbnails/production-line/regular/large.jpg')
+          .default,
       },
     },
     year: 2018,
@@ -378,7 +395,7 @@ const data = [
       regular: {
         small: './assets/thumbnails/dogs/regular/small.jpg',
         medium: './assets/thumbnails/dogs/regular/medium.jpg',
-        large: './assets/thumbnails/dogs/regular/large.jpg',
+        large: require('./assets/thumbnails/dogs/regular/large.jpg').default,
       },
     },
     year: 2016,
@@ -393,7 +410,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/asia-in-24-days/regular/small.jpg',
         medium: './assets/thumbnails/asia-in-24-days/regular/medium.jpg',
-        large: './assets/thumbnails/asia-in-24-days/regular/large.jpg',
+        large: require('./assets/thumbnails/asia-in-24-days/regular/large.jpg')
+          .default,
       },
     },
     year: 2020,
@@ -408,7 +426,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/the-tasty-tour/regular/small.jpg',
         medium: './assets/thumbnails/the-tasty-tour/regular/medium.jpg',
-        large: './assets/thumbnails/the-tasty-tour/regular/large.jpg',
+        large: require('./assets/thumbnails/the-tasty-tour/regular/large.jpg')
+          .default,
       },
     },
     year: 2016,
@@ -423,7 +442,7 @@ const data = [
       regular: {
         small: './assets/thumbnails/darker/regular/small.jpg',
         medium: './assets/thumbnails/darker/regular/medium.jpg',
-        large: './assets/thumbnails/darker/regular/large.jpg',
+        large: require('./assets/thumbnails/darker/regular/large.jpg').default,
       },
     },
     year: 2017,
@@ -438,7 +457,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/unresolved-cases/regular/small.jpg',
         medium: './assets/thumbnails/unresolved-cases/regular/medium.jpg',
-        large: './assets/thumbnails/unresolved-cases/regular/large.jpg',
+        large: require('./assets/thumbnails/unresolved-cases/regular/large.jpg')
+          .default,
       },
     },
     year: 2018,
@@ -453,7 +473,8 @@ const data = [
       regular: {
         small: './assets/thumbnails/mission-saturn/regular/small.jpg',
         medium: './assets/thumbnails/mission-saturn/regular/medium.jpg',
-        large: './assets/thumbnails/mission-saturn/regular/large.jpg',
+        large: require('./assets/thumbnails/mission-saturn/regular/large.jpg')
+          .default,
       },
     },
     year: 2017,
