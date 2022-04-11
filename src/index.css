@@ -253,7 +253,7 @@ Home Page
 ===============
 */
 .home-page-container {
-  width: 100vw;
+  width: 110vw;
   max-width: var(--max-width);
   background: var(--clr-primary-very-dark-blue);
 }
@@ -265,21 +265,26 @@ Home Page
 @media screen and (min-width: 980px) {
   .home-page-container {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     padding: 2rem;
+  }
+  .home-page-inner-container {
+    width: 100vw;
   }
 }
 
 /* Trending slider */
 .trending-slider {
-  width: auto;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  width: 100vw;
 }
 .slider-inner-container {
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1rem;
+  overflow: hidden;
 }
 .slider-title {
   color: var(--clr-primary-white);
@@ -383,6 +388,11 @@ Home Page
   left: 0;
   margin-bottom: 1rem;
   margin-top: -0.5rem;
+}
+
+/* Recommended Container in Movies page and TV Series page */
+.movie-page-content-container {
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 780px) {
   .recommended-inner-container {

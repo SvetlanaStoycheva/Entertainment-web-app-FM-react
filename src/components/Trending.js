@@ -6,7 +6,7 @@ import { FaBookmark } from 'react-icons/fa';
 
 const Trending = () => {
   const trendingItems = data.filter((i) => i.isTrending);
-
+  //https://www.youtube.com/watch?v=KHGc7eZyxKY
   return (
     <section className='trending-slider'>
       <h4 className='slider-title'>Trending</h4>
