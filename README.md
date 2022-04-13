@@ -9,6 +9,7 @@
   - Add/Remove bookmarks from all movies and TV series
   - Search for relevant shows on all pages
   - The data is in local data.js file
+  - The data is saved on the localStorage, so that the user can see the current bookmarked state when come back to the app.
 
   //https://github.com/steveanthony999/galeria_slideshow/blob/master/src/components/gallery/Gallery.js
 

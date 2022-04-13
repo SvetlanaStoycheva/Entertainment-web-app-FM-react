@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import data from '.././data';
 import { BiBookmark } from 'react-icons/bi';
 import { MdLocalMovies } from 'react-icons/md';
 import { FaBookmark } from 'react-icons/fa';
+import { useGlobalContext } from '../context';
 
 const Recommended = () => {
+  const { toggleBookmarked, dataItems: data } = useGlobalContext();
   const [recommendedItems, setRecommendedItems] = useState(
     data.filter((i) => !i.isTrending)
   );
@@ -37,7 +38,7 @@ const Recommended = () => {
       setRecommendedItems(bookmarkedMovies);
       setBookmarkedSeries(bookmarkedSeries);
     }
-  }, [currentPath]);
+  }, [currentPath, data, setRecommendedItems]);
 
   return (
     <>
@@ -66,7 +67,11 @@ const Recommended = () => {
                 key={index}
               >
                 <img src={sliderImg} alt={title} className='recommended-img' />
-                <span className='trending-bookmark-icon recommended-bookmark-icon'>
+                <span
+                  className='trending-bookmark-icon recommended-bookmark-icon'
+                  id={title}
+                  onClick={toggleBookmarked}
+                >
                   {isBookmarked ? <FaBookmark /> : <BiBookmark />}
                 </span>
 
