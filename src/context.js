@@ -25,16 +25,11 @@ const AppProvider = ({ children }) => {
       if (i.title === title) {
         i.isBookmarked ? (i.isBookmarked = false) : (i.isBookmarked = true);
         console.log(i.isBookmarked);
-        return i;
+        // return i;
       }
-      return i;
+      // return i;
     });
-    // const clickedItem = dataItems.find((i) => i.title === title);
-    // console.log(clickedItem);
-    // clickedItem.isBookmarked
-    //   ? (clickedItem.isBookmarked = false)
-    //   : (clickedItem.isBookmarked = true);
-    // console.log(clickedItem);
+
     setDataItems(dataItems);
     localStorage.setItem('dataItems', JSON.stringify(dataItems));
     // console.log(dataItems);

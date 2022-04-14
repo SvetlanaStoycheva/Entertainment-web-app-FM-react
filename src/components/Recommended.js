@@ -26,9 +26,8 @@ const Recommended = () => {
       );
       setRecommendedItems(seriesData);
     } else if (currentPath === '/bookmarked') {
-      const bookmarkedData = recommendedData.filter(
-        (i) => i.isBookmarked === true
-      );
+      //here we take the whole data in order to include the trending movies and series
+      const bookmarkedData = data.filter((i) => i.isBookmarked === true);
       const bookmarkedMovies = bookmarkedData.filter(
         (i) => i.category === 'Movie'
       );
@@ -72,6 +71,7 @@ const Recommended = () => {
                   id={title}
                   onClick={toggleBookmarked}
                 >
+                  {/* <button></button> */}
                   {isBookmarked ? <FaBookmark /> : <BiBookmark />}
                 </span>
 
@@ -122,7 +122,11 @@ const Recommended = () => {
                     alt={title}
                     className='recommended-img'
                   />
-                  <span className='trending-bookmark-icon recommended-bookmark-icon'>
+                  <span
+                    className='trending-bookmark-icon recommended-bookmark-icon'
+                    id={title}
+                    onClick={toggleBookmarked}
+                  >
                     {isBookmarked ? <FaBookmark /> : <BiBookmark />}
                   </span>
 

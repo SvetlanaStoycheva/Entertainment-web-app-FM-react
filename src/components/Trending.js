@@ -1,11 +1,13 @@
 import React from 'react';
-import data from '.././data';
 import { BiBookmark } from 'react-icons/bi';
 import { MdLocalMovies } from 'react-icons/md';
 import { FaBookmark } from 'react-icons/fa';
+import { useGlobalContext } from '../context';
 
 const Trending = () => {
+  const { toggleBookmarked, dataItems: data } = useGlobalContext();
   const trendingItems = data.filter((i) => i.isTrending);
+
   //https://www.youtube.com/watch?v=KHGc7eZyxKY
   return (
     <section className='trending-slider'>
@@ -25,7 +27,11 @@ const Trending = () => {
           return (
             <div className='single-trending-slide' key={index}>
               <img src={sliderImg} alt={title} className='slider-img' />
-              <span className='trending-bookmark-icon'>
+              <span
+                className='trending-bookmark-icon'
+                id={title}
+                onClick={toggleBookmarked}
+              >
                 {isBookmarked ? <FaBookmark /> : <BiBookmark />}
               </span>
 
