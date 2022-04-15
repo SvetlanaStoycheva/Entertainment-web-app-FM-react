@@ -1,6 +1,6 @@
 ## Entertainment web app // Frontend Mentor Project // React and CSS
 
-- [see project]()
+- [see project](https://sweta-entertainment-web-app-fm.netlify.app)
 - Your users should be able to:
 
   - View the optimal layout for the app depending on their device's screen size
@@ -32,6 +32,10 @@
 
 - import data from data.js: in order to see the images, in the data.js the images must have require ().default
   image: require('./assets/thumbnails/beyond-earth/trending/large.jpg').default,
+
+- Challenges
+  - BookmarkToggle is working only after page reload
+  - Search functionality works but when the searchTerm is deleted, we go back to the initial data (the bookmarked state is lost)
 
 #### Helpers
 

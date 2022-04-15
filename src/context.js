@@ -15,6 +15,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [dataItems, setDataItems] = useState(getLocalStorage);
+  const [fullCurrentData, setFullCurrentData] = useState(dataItems);
 
   //when bookmarked Icon is clicked in Recommended
   const toggleBookmarked = (e) => {
@@ -32,8 +33,26 @@ const AppProvider = ({ children }) => {
 
     setDataItems(dataItems);
     localStorage.setItem('dataItems', JSON.stringify(dataItems));
-    // console.log(dataItems);
   };
+
+  //when we have a serchTerm in the serchForm
+  const desplaySearchedItems = (searchTerm, pageName) => {
+    setFullCurrentData(dataItems);
+    if (searchTerm && pageName === 'home') {
+      const tempData = dataItems.filter((i) =>
+        i.title.toLowerCase().startsWith(searchTerm)
+      );
+      setDataItems(tempData);
+    } else if (!searchTerm) {
+      // but you lose the bookmarked info!!!
+      // setDataItems(fullCurrentData);
+      setDataItems(data);
+      // localStorage.setItem('dataItems', JSON.stringify(fullCurrentData));
+    }
+  };
+  // useEffect(() => {
+  //   desplaySearchedItems();
+  // }, [searchTerm]);
 
   //set data on LocalStorage
   useEffect(() => {
@@ -41,7 +60,9 @@ const AppProvider = ({ children }) => {
   }, [dataItems]);
 
   return (
-    <AppContext.Provider value={{ toggleBookmarked, dataItems }}>
+    <AppContext.Provider
+      value={{ toggleBookmarked, dataItems, desplaySearchedItems }}
+    >
       {children}
     </AppContext.Provider>
   );

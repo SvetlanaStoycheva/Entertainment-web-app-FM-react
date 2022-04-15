@@ -6,24 +6,20 @@ import { useGlobalContext } from '../context';
 
 const Recommended = () => {
   const { toggleBookmarked, dataItems: data } = useGlobalContext();
-  const [recommendedItems, setRecommendedItems] = useState(
-    data.filter((i) => !i.isTrending)
-  );
+  const [recommendedItems, setRecommendedItems] = useState(data);
   const [bookmarkedSeries, setBookmarkedSeries] = useState(null);
 
   //depending on the page: home, movies or series, show the correspondent recommendedItems
   const currentPath = window.location.pathname;
   useEffect(() => {
-    const recommendedData = data.filter((i) => !i.isTrending);
     if (currentPath === '/') {
+      const recommendedData = data.filter((i) => !i.isTrending);
       setRecommendedItems(recommendedData);
     } else if (currentPath === '/movies') {
-      const movieData = recommendedData.filter((i) => i.category === 'Movie');
+      const movieData = data.filter((i) => i.category === 'Movie');
       setRecommendedItems(movieData);
     } else if (currentPath === '/tvseries') {
-      const seriesData = recommendedData.filter(
-        (i) => i.category === 'TV Series'
-      );
+      const seriesData = data.filter((i) => i.category === 'TV Series');
       setRecommendedItems(seriesData);
     } else if (currentPath === '/bookmarked') {
       //here we take the whole data in order to include the trending movies and series
