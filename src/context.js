@@ -15,17 +15,15 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [dataItems, setDataItems] = useState(getLocalStorage);
-  const [fullCurrentData, setFullCurrentData] = useState(dataItems);
+  // const [fullCurrentData, setFullCurrentData] = useState(dataItems);
 
-  //when bookmarked Icon is clicked in Recommended
+  //when bookmarked Icon is clicked in Recommended => update dataItems
   const toggleBookmarked = (e) => {
     const title = e.currentTarget.id;
 
-    //update data after changes in isBookmarked
     dataItems.map((i) => {
       if (i.title === title) {
         i.isBookmarked ? (i.isBookmarked = false) : (i.isBookmarked = true);
-        console.log(i.isBookmarked);
         // return i;
       }
       // return i;
@@ -37,22 +35,34 @@ const AppProvider = ({ children }) => {
 
   //when we have a serchTerm in the serchForm
   const desplaySearchedItems = (searchTerm, pageName) => {
-    setFullCurrentData(dataItems);
     if (searchTerm && pageName === 'home') {
       const tempData = dataItems.filter((i) =>
         i.title.toLowerCase().startsWith(searchTerm)
       );
       setDataItems(tempData);
+    } else if (searchTerm && pageName === 'movies') {
+      const dataMovies = dataItems.filter((i) => i.category === 'Movie');
+      const tempData = dataMovies.filter((i) =>
+        i.title.toLowerCase().startsWith(searchTerm)
+      );
+      setDataItems(tempData);
+    } else if (searchTerm && pageName === 'series') {
+      const dataSeries = dataItems.filter((i) => i.category === 'TV Series');
+      const tempData = dataSeries.filter((i) =>
+        i.title.toLowerCase().startsWith(searchTerm)
+      );
+      setDataItems(tempData);
+    } else if (searchTerm && pageName === 'bookmarked') {
+      const dataBookmarked = dataItems.filter((i) => i.isBookmarked === true);
+      const tempData = dataBookmarked.filter((i) =>
+        i.title.toLowerCase().startsWith(searchTerm)
+      );
+      setDataItems(tempData);
     } else if (!searchTerm) {
       // but you lose the bookmarked info!!!
-      // setDataItems(fullCurrentData);
       setDataItems(data);
-      // localStorage.setItem('dataItems', JSON.stringify(fullCurrentData));
     }
   };
-  // useEffect(() => {
-  //   desplaySearchedItems();
-  // }, [searchTerm]);
 
   //set data on LocalStorage
   useEffect(() => {

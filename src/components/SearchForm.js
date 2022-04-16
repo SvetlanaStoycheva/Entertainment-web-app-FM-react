@@ -34,9 +34,10 @@ const SearchForm = () => {
         <input
           type='text'
           className='search-input'
-          // value={text}
-          // onChange={updateMovies}
           placeholder='Search for movies'
+          value={searchTerm}
+          name='movies'
+          onChange={handleSearchTerm}
         />
       </form>
     );
@@ -47,9 +48,10 @@ const SearchForm = () => {
         <input
           type='text'
           className='search-input'
-          // value={text}
-          // onChange={updateMovies}
           placeholder='Search for TV series'
+          value={searchTerm}
+          name='series'
+          onChange={handleSearchTerm}
         />
       </form>
     );
@@ -60,9 +62,10 @@ const SearchForm = () => {
         <input
           type='text'
           className='search-input'
-          // value={text}
-          // onChange={updateMovies}
           placeholder='Search for bookmarked shows'
+          value={searchTerm}
+          name='bookmarked'
+          onChange={handleSearchTerm}
         />
       </form>
     );

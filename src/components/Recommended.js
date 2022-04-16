@@ -67,7 +67,6 @@ const Recommended = () => {
                   id={title}
                   onClick={toggleBookmarked}
                 >
-                  {/* <button></button> */}
                   {isBookmarked ? <FaBookmark /> : <BiBookmark />}
                 </span>
 
