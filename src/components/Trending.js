@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { BiBookmark } from 'react-icons/bi';
 import { MdLocalMovies } from 'react-icons/md';
 import { FaBookmark } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
+import { motion } from 'framer-motion';
 
 const Trending = () => {
   const { toggleBookmarked, dataItems: data } = useGlobalContext();
   const trendingItems = data.filter((i) => i.isTrending);
 
-  //https://www.youtube.com/watch?v=KHGc7eZyxKY
+  //https://www.youtube.com/watch?v=W0bEL93tt4k
+
   return (
-    <section className='trending-slider'>
+    <motion.section
+      drag='x'
+      dragConstraints={{ right: 0 }}
+      className='trending-slider'
+    >
       <h4 className='slider-title'>Trending</h4>
-      <div className='slider-inner-container'>
+      <motion.div
+        drag='x'
+        dragConstraints={{ right: 0 }}
+        className='slider-inner-container'
+      >
         {trendingItems.map((i, index) => {
           const {
             category,
@@ -53,8 +63,8 @@ const Trending = () => {
             </div>
           );
         })}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

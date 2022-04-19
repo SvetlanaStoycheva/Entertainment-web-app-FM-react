@@ -244,6 +244,7 @@ SearchForm
     border-bottom: 2px solid var(--clr-primary-grayish-blue);
   }
   .form-container {
+    width: 70vw;
     margin-top: 1rem;
   }
 }
@@ -253,7 +254,7 @@ Home Page
 ===============
 */
 .home-page-container {
-  width: 110vw;
+  width: 105vw;
   max-width: var(--max-width);
   background: var(--clr-primary-very-dark-blue);
 }
@@ -278,13 +279,15 @@ Home Page
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 100vw;
+  overflow: hidden;
 }
 .slider-inner-container {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1rem;
-  overflow: hidden;
+
+  cursor: grab;
 }
 .slider-title {
   color: var(--clr-primary-white);
@@ -407,6 +410,9 @@ Home Page
   }
 }
 @media screen and (min-width: 980px) {
+  .recommended-container {
+    width: 80vw;
+  }
   .recommended-inner-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 88vw;
